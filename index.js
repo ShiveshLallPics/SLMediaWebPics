@@ -1,9 +1,8 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle'); // Match button's class
+    const nav = document.querySelector('nav'); // Select <nav>
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuToggle = document.querySelector('menu-toggle');
-        const nav = document.querySelector('nav');
-
-        menuToggle.addEventListener('click', function () {
-            nav.classList.toggle('show-menu');
-        });
+    menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('show-menu'); // Toggle class on nav
     });
+});
