@@ -1,5 +1,12 @@
 /* General Styles */
-
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
 
 /* Header Styles */
 header {
@@ -66,15 +73,6 @@ nav a {
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.15);
   color: #fff;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
 }
 
 /* Hero Section Styles */
