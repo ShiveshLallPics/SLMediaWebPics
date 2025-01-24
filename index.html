@@ -11,17 +11,7 @@
         <h1><img src="https://lh3.googleusercontent.com/d/18emAmzJwdwV4vOldCM5By3M0wpTwnFix"></h1>
         <nav>
             <button class="menu-toggle">Menu</button>
-            <ul class="nav-left">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="../HTML/contact.html">Contact</a></li>
-            </ul>
-            <ul class="nav-right">
-                <li><a href="./HTML/portfolio.html">Portfolio</a></li>
-                <li><a href="HTML/pricing.html">Pricing</a></li>
-            </ul>
         </nav>
-        
-        
     </header>
 
     <section id="home" class="hero">
@@ -41,11 +31,24 @@
         </div>
     </section>
 
+    <div id="popupMenu" class="popup">
+        <a href="index.html">Home</a>
+        <a href="../HTML/contact.html">Contact</a>
+        <a href="./HTML/portfolio.html">Portfolio</a>
+        <a href="HTML/pricing.html">Pricing</a>
+    </div>
+
     <footer class="footer-center">
         <p>&copy; 2025 Shivesh Lall Media</p>
     </footer>
 
     <script src="./index.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            const popupMenu = document.getElementById('popupMenu');
+            popupMenu.style.display = popupMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 
 </body>
 </html>
