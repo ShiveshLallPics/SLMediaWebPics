@@ -61,16 +61,24 @@ nav {
 
 /* Pop-up Menu Styles */
 .popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    z-index: 200;
+  display: none; /* Start hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 200;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.popup.show {
+  display: block; /* Make visible */
+  opacity: 1;
+}
+
 }
 .popup a {
     display: block;
@@ -193,9 +201,22 @@ footer.footer-center a:hover {
   color: #000000;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .popup {
+      width: 100vw; /* Full screen width */
+      height: 100vh; /* Full screen height */
+      top: 0;
+      left: 0;
+      transform: none;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .popup a {
+      font-size: 1.5rem;
+      margin: 1rem 0;
   }
 }
+
