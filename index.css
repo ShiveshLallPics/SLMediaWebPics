@@ -75,6 +75,36 @@ nav a:hover {
   color: #fff;
 }
 
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styles for Mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.show-menu ul {
+        display: flex;
+    }
+}
+
 /* Hero Section Styles */
 .hero {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://lh3.googleusercontent.com/d/1XLJmtm8RreUA3cossxDFxrwlYBjerYGj');
@@ -189,27 +219,4 @@ footer.footer-center a:hover {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-  header {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-  }
-  nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
-  }
-  .hero {
-      padding: 2rem;
-  }
-  .hero h2 {
-      font-size: 2rem;
-  }
-  .about-bio {
-      flex-direction: column;
-      padding: 1rem;
-  }
-  #bio {
-      padding: 10px;
-  }
-}
+@media screen and (max-width: 768px[_{{{CITATION{{{_1{](https://github.com/developer-ni3/mcq-demo/tree/49b8414fb6319638e09020d39b0e43d3a4fa2235/application%2Fviews%2Fwelcome2.php)
