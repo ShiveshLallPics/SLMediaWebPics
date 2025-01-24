@@ -1,4 +1,4 @@
-<script>
+
     document.addEventListener('DOMContentLoaded', function () {
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
@@ -7,4 +7,3 @@
             nav.classList.toggle('show-menu');
         });
     });
-</script>
