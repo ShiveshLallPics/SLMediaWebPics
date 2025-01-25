@@ -32,6 +32,7 @@
     </section>
 
     <div id="popupMenu" class="popup">
+        <button class="close-btn" aria-label="Close popup menu">X</button>
         <a href="index.html">Home</a>
         <a href="../HTML/contact.html">Contact</a>
         <a href="./HTML/portfolio.html">Portfolio</a>
@@ -43,20 +44,23 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const popupMenu = document.getElementById('popupMenu');
+            const closeButton = document.querySelector('.close-btn');
 
- document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const popupMenu = document.getElementById('popupMenu');
+            if (menuToggle && popupMenu && closeButton) {
+                menuToggle.addEventListener('click', function () {
+                    popupMenu.classList.toggle('show');
+                });
 
-    if (menuToggle && popupMenu) {
-        menuToggle.addEventListener('click', function () {
-            popupMenu.classList.toggle('show'); // Add or remove 'show' class
+                closeButton.addEventListener('click', function () {
+                    popupMenu.classList.remove('show');
+                });
+            } else {
+                console.error("Menu toggle button, popup menu, or close button not found!");
+            }
         });
-    } else {
-        console.error("Menu toggle button or popup menu not found!");
-    }
-});
-
     </script>
 
 </body>
