@@ -24,6 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const popupMenu = document.getElementById('popupMenu');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Function to toggle the visibility of the popup menu
+    function toggleMenu() {
+        popupMenu.classList.toggle('show');
+    }
+
+    // Add event listeners for menu toggle and close button
+    menuToggle.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+
+    // Close the menu if the user clicks outside of it
+    document.addEventListener('click', (event) => {
+        if (!popupMenu.contains(event.target) && event.target !== menuToggle) {
+            popupMenu.classList.remove('show');
+        }
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // Select the gallery container
@@ -33,13 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = [
         {src: 'https://lh3.googleusercontent.com/d/1xkqOTIg4RAST3dZu03cSCcNpwatqnJas', type: 'portrait'},
         {src: 'https://lh3.googleusercontent.com/d/1cntrUkOWC5z_m1kwdY-K2pJ7r0vG3aHl', type: 'landscape'},
-        {src: 'https://lh3.googleusercontent.com/d/15hWM6xbwxUOLTpc4DsiV4-fM1rVAZ7M6', type: 'wildlife'},
-        {src: 'https://lh3.googleusercontent.com/d/1m0kZwkuhBvQ42rN6OYAdaYWDHrqu_oXK', type: 'urban'},
-        {src: 'https://lh3.googleusercontent.com/d/1Duid_9nR1-cSilppDw2dd1zFLEtcB50W', type: 'portrait'},
+        {src: 'https://lh3.googleusercontent.com/d/15hWM6xbwxUOLTpc4DsiV4-fM1rVAZ7M6', type: 'landscape'},
+        {src: 'https://lh3.googleusercontent.com/d/1m0kZwkuhBvQ42rN6OYAdaYWDHrqu_oXK', type: 'landscape'},
+        {src: 'https://lh3.googleusercontent.com/d/1Duid_9nR1-cSilppDw2dd1zFLEtcB50W', type: 'weddings'},
         {src: 'https://lh3.googleusercontent.com/d/1Mch-I-j51ocYPcPG5-nEuGXZjZyYCbe6', type: 'landscape'},
-        {src: 'https://lh3.googleusercontent.com/d/1Lwtt2Q-v0FoILsPp3ic1DxB4BIlDVXDb', type: 'wildlife'},
-        {src: 'https://lh3.googleusercontent.com/d/1lWVAX8nJbbMv13BmL3HEG1IGt0YquPZr', type: 'urban'},
-
+        {src: 'https://lh3.googleusercontent.com/d/1Lwtt2Q-v0FoILsPp3ic1DxB4BIlDVXDb', type: 'landscape'},
+        {src: 'https://lh3.googleusercontent.com/d/1lWVAX8nJbbMv13BmL3HEG1IGt0YquPZr', type: 'automotive'},
         // Add more images as needed
     ];
 
