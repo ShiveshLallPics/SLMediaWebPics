@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="/CSS/portfolio.css">
+</head>
+<body>
+    <header>
+        <h1><img src="https://lh3.googleusercontent.com/d/18emAmzJwdwV4vOldCM5By3M0wpTwnFix"></h1>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">Menu</button>
+        </nav>
+        <div id="popupMenu" class="popup">
+            <button class="close-btn">X</button>
+            <a href="../index.html">Home</a>
+            <a href="">Contact</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="#">Pricing</a>
+        </div>
+        
+    </header>
+
+    <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio</h2>
+        <div class="filter-dropdown">
+            <label for="filter">Filter by Type:</label>
+            <select id="filter" onchange="filterGallery()">
+                <option value="all">All</option>
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+                <option value="wildlife">Wildlife</option>
+                <option value="urban">Urban</option>
+            </select>
+        </div>
+        <div class="gallery"></div>
+    </section>
+
+    <footer class="footer-center">
+        <p>&copy; 2025 Shivesh Lall Media</p>
+        <a href="https://www.instagram.com/shiveshlallmedia/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="30" height="30"> @shiveshlallmedia
+        </a>
+        <a href="https://www.facebook.com/ShiveshLallMedia/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" width="30" height="30"> @shiveshlallmedia
+        </a>
+    </footer>
+
+    <script src="/JAVASCRIPT/portfolio.js"></script>
+</body>
+</html>
