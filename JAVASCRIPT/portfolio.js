@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'https://lh3.googleusercontent.com/d/1cntrUkOWC5z_m1kwdY-K2pJ7r0vG3aHl', type: 'landscape'},
         {src: 'https://lh3.googleusercontent.com/d/15hWM6xbwxUOLTpc4DsiV4-fM1rVAZ7M6', type: 'wildlife'},
         {src: 'https://lh3.googleusercontent.com/d/1m0kZwkuhBvQ42rN6OYAdaYWDHrqu_oXK', type: 'urban'},
+        {src: 'https://lh3.googleusercontent.com/d/1Duid_9nR1-cSilppDw2dd1zFLEtcB50W', type: 'portrait'},
+        {src: 'https://lh3.googleusercontent.com/d/1Mch-I-j51ocYPcPG5-nEuGXZjZyYCbe6', type: 'landscape'},
+        {src: 'https://lh3.googleusercontent.com/d/1Lwtt2Q-v0FoILsPp3ic1DxB4BIlDVXDb', type: 'wildlife'},
+        {src: 'https://lh3.googleusercontent.com/d/1lWVAX8nJbbMv13BmL3HEG1IGt0YquPZr', type: 'urban'},
+
         // Add more images as needed
     ];
 
