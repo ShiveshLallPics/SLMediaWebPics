@@ -40,9 +40,8 @@ header h1 {
 header h1 img {
   max-width: 140px;
   height: auto;
-  transform: translateX(-10px); /* Adjust the value to slightly push the image to the left */
+  transform: translateX(-10px);
 }
-
 
 /* Navigation Styles */
 nav {
@@ -65,23 +64,23 @@ nav {
 
 /* Pop-up Menu Styles */
 .popup {
-  display: none; /* Start hidden */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f0f0f5; /* Light gray background */
-  background-image: linear-gradient(to bottom right, #f0f0f5, #e0e0e5); /* Subtle gradient */
+  background-color: #f0f0f5;
+  background-image: linear-gradient(to bottom right, #f0f0f5, #e0e0e5);
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05); /* Refined box shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   z-index: 200;
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Smooth background transition */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
 .popup.show {
-  display: block; /* Make visible */
+  display: block;
   opacity: 1;
 }
 
@@ -91,11 +90,11 @@ nav {
   text-decoration: none;
   font-size: 1.2rem;
   margin: 1rem 0;
-  transition: color 0.2s ease; /* Hover effect transition */
+  transition: color 0.2s ease;
 }
 
 .popup a:hover {
-  color: #007bff; /* Blue hover color */
+  color: #007bff;
 }
 
 /* Close Button Styles */
@@ -153,7 +152,6 @@ nav {
   animation: fadeIn 1.2s ease-out;
 }
 
-
 /* Footer Styles */
 footer {
   background-color: #f0f0f5;
@@ -173,24 +171,15 @@ footer a {
   align-items: center;
 }
 
-footer a img {
-  margin-right: 8px;
-}
-
 footer a:hover {
-  color: #1da1f2; /* Instagram & Facebook logo hover color */
-}
-
-footer p {
-  margin: 10px 0;
-  font-size: 14px;
+  color: #1da1f2;
 }
 
 /* Portfolio Section */
 .portfolio-section {
   padding: 2rem;
   text-align: center;
-  margin-top: 90px; /* Add top margin to push it down */
+  margin-top: 90px;
 }
 
 .portfolio-section h2 {
@@ -198,44 +187,41 @@ footer p {
   margin-bottom: 1rem;
 }
 
-.filter-dropdown {
-  margin-bottom: 1rem;
-}
-
 /* Gallery Styles */
 .gallery {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
-padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: start;
 }
 
 .gallery-item {
-flex: 1 1 calc(33.333% - 2rem); /* Three items per row */
-box-sizing: border-box;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-position: relative; /* Ensure the image stays within bounds */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover; /* Cover ensures that the image covers the entire area, cropping excess */
-display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-.gallery-item {
-  flex: 1 1 calc(50% - 2rem); /* Two items per row */
-}
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
-.gallery-item {
-  flex: 1 1 calc(100% - 2rem); /* One item per row */
-}
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
