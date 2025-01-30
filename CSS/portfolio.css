@@ -220,10 +220,9 @@ footer p {
 
 .gallery-item img {
   width: 100%;
-  height: auto; /* Maintain original aspect ratio */
-  max-height: 300px; /* Set a maximum height */
+  height: 100%;
   display: block;
-  object-fit: cover; /* Ensure images cover the container without distortion */
+  object-fit: contain; /* Ensure images maintain their aspect ratio without cropping */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
@@ -253,3 +252,4 @@ footer p {
     column-gap: 10px; /* Adjust the gap between columns */
   }
 }
+
