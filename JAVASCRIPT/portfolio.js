@@ -88,3 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for filter dropdown change
     document.getElementById('filter').addEventListener('change', filterGallery);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+    
+    galleryItems.forEach(item => {
+      item.style.objectFit = "cover"; // Ensures images cover the container without distortion
+    });
+  });
+  

@@ -43,7 +43,6 @@ header h1 img {
   transform: translateX(-10px); /* Adjust the value to slightly push the image to the left */
 }
 
-
 /* Navigation Styles */
 nav {
   display: flex;
@@ -153,7 +152,6 @@ nav {
   animation: fadeIn 1.2s ease-out;
 }
 
-
 /* Footer Styles */
 footer {
   background-color: #f0f0f5;
@@ -202,40 +200,56 @@ footer p {
   margin-bottom: 1rem;
 }
 
-/* Gallery Styles */
+/* Updated Gallery Styles for Masonry Layout */
 .gallery {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
-padding: 1rem;
+  column-count: 4; /* Adjust the number of columns */
+  column-gap: 10px; /* Adjust the gap between columns */
+  margin: 1rem auto; /* Center align */
+  max-width: 1200px; /* Add a maximum width */
+  padding: 0 1rem; /* Add some padding for better alignment */
 }
 
 .gallery-item {
-flex: 1 1 calc(33.333% - 2rem); /* Three items per row */
-box-sizing: border-box;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-position: relative; /* Ensure the image stays within bounds */
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px; /* Adjust the margin between items */
+  break-inside: avoid; /* Ensure the items break correctly */
+  overflow: hidden; /* Hide overflow content */
+  border-radius: 8px; /* Add rounded corners */
 }
 
 .gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover; /* Cover ensures that the image covers the entire area, cropping excess */
-display: block;
+  width: 100%;
+  height: auto; /* Maintain original aspect ratio */
+  max-height: 300px; /* Set a maximum height */
+  display: block;
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-.gallery-item {
-  flex: 1 1 calc(50% - 2rem); /* Two items per row */
-}
+  .gallery {
+    column-count: 3;
+    column-gap: 10px; /* Adjust the gap between columns */
+  }
 }
 
 @media (max-width: 768px) {
-.gallery-item {
-  flex: 1 1 calc(100% - 2rem); /* One item per row */
+  .gallery {
+    column-count: 2;
+    column-gap: 10px; /* Adjust the gap between columns */
+  }
 }
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+    column-gap: 10px; /* Adjust the gap between columns */
+  }
 }
