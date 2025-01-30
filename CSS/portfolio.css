@@ -221,7 +221,7 @@ footer p {
 .gallery-item img {
   width: 100%;
   height: auto; /* Maintain original aspect ratio */
-  max-height: 300px; /* Set a maximum height */
+  max-height: 400px; /* Set a maximum height */
   display: block;
   object-fit: cover; /* Ensure images cover the container without distortion */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
