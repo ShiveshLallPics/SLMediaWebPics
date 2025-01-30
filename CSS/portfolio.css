@@ -228,7 +228,7 @@ footer p {
 }
 
 .gallery-item:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.20); /* Slight zoom effect on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
