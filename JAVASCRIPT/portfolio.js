@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lightbox.style.display = 'flex';
         lightboxImg.src = item.src;
         captionText.innerHTML = item.alt;
+        captionText.style.display = 'none'; // Hide the caption
     }
 
     // Function to close the lightbox
