@@ -250,13 +250,19 @@ footer p {
 @media (max-width: 480px) {
   .gallery {
     column-count: 2; /* Keep two columns for mobile devices */
-    column-gap: 10px; /* Adjust the gap between columns */
+    column-gap: 5px; /* Adjust the gap between columns for better use of space */
+  }
+  .gallery-item img {
+    max-height: 450px; /* Increase max height for better view */
   }
 }
 
 @media (max-width: 320px) {
   .gallery {
     column-count: 1; /* Fall back to one column for the smallest screens */
-    column-gap: 10px; /* Adjust the gap between columns */
+    column-gap: 5px; /* Adjust the gap between columns */
+  }
+  .gallery-item img {
+    max-height: 500px; /* Increase max height for better view */
   }
 }
