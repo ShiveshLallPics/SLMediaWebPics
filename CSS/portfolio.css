@@ -266,3 +266,70 @@ footer p {
     max-height: 500px; /* Increase max height for better view */
   }
 }
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 300;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80vh; /* Maximum height is 80% of viewport height */
+  object-fit: contain; /* Scale the image to fit without distortion */
+}
+
+.lightbox-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-lightbox:hover,
+.close-lightbox:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .lightbox-content {
+      width: 90%;
+      max-width: 90%; /* Increase max width for smaller screens */
+      max-height: 70vh; /* Reduce max height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox-content {
+      width: 100%;
+      max-width: 100%; /* Use full width for mobile devices */
+      max-height: 60vh; /* Further reduce max height for mobile devices */
+  }
+}
+

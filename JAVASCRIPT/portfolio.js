@@ -96,4 +96,30 @@ document.addEventListener("DOMContentLoaded", function() {
       item.style.objectFit = "cover"; // Ensures images cover the container without distortion
     });
   });
-  
+
+  //Lightbox Functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-content');
+    const captionText = document.querySelector('.lightbox-caption');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'block';
+            lightboxImg.src = item.src;
+            captionText.innerHTML = item.alt;
+        });
+    });
+
+    closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
