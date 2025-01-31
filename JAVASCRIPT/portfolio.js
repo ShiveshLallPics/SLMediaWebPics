@@ -43,14 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navigation Buttons
     nextButton.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
-        lightboxImg.src = filteredImages[currentImageIndex].src;
+        changeImage((currentImageIndex + 1) % filteredImages.length);
     });
 
     prevButton.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
-        lightboxImg.src = filteredImages[currentImageIndex].src;
+        changeImage((currentImageIndex - 1 + filteredImages.length) % filteredImages.length);
     });
+
+    function changeImage(newIndex) {
+        lightboxImg.style.opacity = 0;
+        setTimeout(() => {
+            currentImageIndex = newIndex;
+            lightboxImg.src = filteredImages[currentImageIndex].src;
+            lightboxImg.style.opacity = 1;
+        }, 300); // Adjust the delay as needed
+    }
 
     // Menu Toggle
     function toggleMenu() {
@@ -114,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Filter
-    function filterGallery() {
+       // Filter
+       function filterGallery() {
         const filter = filterSelect.value;
         filteredImages = filter === 'all' ? images : images.filter(image => image.type === filter);
 
@@ -156,12 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Math.abs(swipeDistance) > 50) { // Adjust the threshold as needed
             if (swipeDistance > 0) {
                 // Swipe right
-                currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
+                changeImage((currentImageIndex - 1 + filteredImages.length) % filteredImages.length);
             } else {
                 // Swipe left
-                currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
+                changeImage((currentImageIndex + 1) % filteredImages.length);
             }
-            lightboxImg.src = filteredImages[currentImageIndex].src;
         }
     });
 });
