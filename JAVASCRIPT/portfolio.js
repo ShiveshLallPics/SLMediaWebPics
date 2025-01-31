@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'https://lh3.googleusercontent.com/d/1y7iWrMxu-Dd66DGpKoFSEG2leLaKUAnF', type: 'portrait', alt: 'Headshot of a person' },
         { src: 'https://lh3.googleusercontent.com/d/1YMxk-dRQpWGuy2zv1eoEn2GGkfsNjgVL', type: 'portrait', alt: 'Full body portrait' },
         { src: 'https://lh3.googleusercontent.com/d/12tszn1Uk00hTPTRDnGYPQLBnYIYn1EO4', type: 'portrait', alt: 'Conference hall' },
-        { src: 'https://lh3.googleusercontent.com/d/', type: 'portrait', alt: 'Conference hall' },
+        { src: 'https://lh3.googleusercontent.com/d/1sC_YuYbidzyA7t9wjbhGDALf2Mwk2ytn', type: 'portrait', alt: 'Conference hall' },
         { src: 'https://lh3.googleusercontent.com/d/15bzZm15w-PVM0b9Qy6XUioFio5EJQGdm', type: 'automotive', alt: 'Sports car' },
         { src: 'https://lh3.googleusercontent.com/d/1ePdoyNgu1DCWt9AmECUMytcTVH2blKwt', type: 'automotive', alt: 'Classic car' },
         { src: 'https://lh3.googleusercontent.com/d/1GecXTN7Z6-k-uIcylHdkktOmUuALjqBq', type: 'automotive', alt: 'Luxury car' },
@@ -118,10 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'https://lh3.googleusercontent.com/d/1JQ81hA5Wy3EzPsGfUU0-CDVGneJG9lcP', type: 'events', alt: 'Conference hall' },
         { src: 'https://lh3.googleusercontent.com/d/1lNDcM_3PUjj4qPgyb8kUMJGpWTOqp6Fz', type: 'events', alt: 'Conference hall' },
         { src: 'https://lh3.googleusercontent.com/d/1Op0IPaMp5weu7FdNeeIqP-L9CtG78pVX', type: 'events', alt: 'Conference hall' },
+        { src: 'https://lh3.googleusercontent.com/d/1nRduEcKMuZLLOqkg1g3jUc2uAkbXIN8z', type: 'events', alt: 'Conference hall' },
+        { src: 'https://lh3.googleusercontent.com/d/1r8EFNFiUMQD_vqPTZaLaEFoS-dJn8ryS', type: 'events', alt: 'Conference hall' },
+        { src: 'https://lh3.googleusercontent.com/d/1anxEKvOTqSn2frsKKTRy1dEDsePvKK9A', type: 'events', alt: 'Conference hall' },
         { src: 'https://lh3.googleusercontent.com/d/1qqsMWM4kjEV_hIkStEjj3NMR_uc3WZok', type: 'food', alt: 'Delicious meal' },
         { src: 'https://lh3.googleusercontent.com/d/16oRfQK6qsxC1x-FIdo9PwvX6r13XvPuJ', type: 'food', alt: 'Close-up of food' },
-        { src: 'https://lh3.googleusercontent.com/d/1tDkTMXf_9uOGEfimOSwU-40MtCpAissK', type: 'action', alt: 'Athlete in motion' },
-        { src: 'https://lh3.googleusercontent.com/d/1hANTXqaA8VKeVQRhm-581Bknwwwp-EMQ', type: 'action', alt: 'Sports action' },
+        { src: 'https://lh3.googleusercontent.com/d/1tDkTMXf_9uOGEfimOSwU-40MtCpAissK', type: 'events', alt: 'Athlete in motion' },
+        { src: 'https://lh3.googleusercontent.com/d/1hANTXqaA8VKeVQRhm-581Bknwwwp-EMQ', type: 'events', alt: 'Sports action' },
         // ... more images with descriptive alt text
     ];
 
