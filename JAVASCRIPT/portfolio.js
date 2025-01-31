@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.createElement('button');
     const prevButton = document.createElement('button');
 
-    nextButton.textContent = 'Next';
-    prevButton.textContent = 'Previous';
+    nextButton.textContent = '▶';
+    prevButton.textContent = '◀';
 
     nextButton.classList.add('lightbox-nav-button', 'next');
     prevButton.classList.add('lightbox-nav-button', 'prev');
@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             popupMenu.classList.remove('show');
         }
     });
-
     // Image Data
     const images = [
         { src: 'https://lh3.googleusercontent.com/d/1shB4O25D37ZAWH-uiUIbCUuH4fGOULup', type: 'weddings', alt: 'Bride and groom exchanging vows' },
