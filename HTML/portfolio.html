@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio</title>
     <link rel="stylesheet" href="../CSS/portfolio.css">
 </head>
+
 <body>
+
     <header>
         <h1><img src="https://lh3.googleusercontent.com/d/1zXmOKGji2KB9ER87_ks81CLYzMT1ufab"></h1>
         <nav>
             <button class="menu-toggle" aria-label="Toggle navigation menu">Menu</button>
         </nav>
+
         <div id="popupMenu" class="popup">
             <button class="close-btn">X</button>
             <a href="../index.html">Home</a>
@@ -19,7 +23,6 @@
             <a href="./portfolio.html">Portfolio</a>
             <a href="#">Pricing</a>
         </div>
-        
     </header>
 
     <section id="portfolio" class="portfolio-section">
@@ -38,16 +41,16 @@
                 <option value="automotive">Automotive</option>
             </select>
         </div>
-        
         <div class="gallery"></div>
     </section>
 
-    <!-- Lightbox Container -->
-<div id="lightbox" class="lightbox">
-    <span class="close-lightbox">&times;</span>
-    <img class="lightbox-content">
-    <div class="lightbox-caption"></div>
+<div id="lightbox" class="lightbox" style="display: none;">
+        <span class="close-lightbox">×</span>
+        <img class="lightbox-content" src="https://lh3.googleusercontent.com/d/1GecXTN7Z6-k-uIcylHdkktOmUuALjqBq">
+        <button class="lightbox-nav-button prev">Previous</button>
+        <button class="lightbox-nav-button next">Next</button>
 </div>
+
     <footer class="footer-center">
         <p>&copy; 2025 Shivesh Lall Media</p>
         <a href="https://www.instagram.com/shiveshlallmedia/" target="_blank">
