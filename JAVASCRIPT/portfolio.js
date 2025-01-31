@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.createElement('button');
     const prevButton = document.createElement('button');
 
-   // nextButton.textContent = '▶';
-  //  prevButton.textContent = '◀';
+    nextButton.textContent = '▶';
+    prevButton.textContent = '◀';
 
     nextButton.classList.add('lightbox-nav-button', 'next');
     prevButton.classList.add('lightbox-nav-button', 'prev');
