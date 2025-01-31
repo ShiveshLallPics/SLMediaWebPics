@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popupMenu.classList.remove('show');
         }
     });
+
     // Image Data
     const images = [
         { src: 'https://lh3.googleusercontent.com/d/1shB4O25D37ZAWH-uiUIbCUuH4fGOULup', type: 'weddings', alt: 'Bride and groom exchanging vows' },
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterGallery() {
         const filter = filterSelect.value;
         filteredImages = filter === 'all' ? images : images.filter(image => image.type === filter);
-        
+
         // Ensure the clicked image remains in the gallery
         if (filteredImages.length > 0) {
             // If the current image is no longer in the filtered list, reset to the first image
@@ -125,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentImageIndex = 0;
             }
         }
-        
         createGallery(filteredImages);
         // After filtering, reopen the lightbox with the correct image index
         if (filteredImages.length > 0) {
@@ -138,4 +138,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial Gallery Creation
     filteredImages = images;
     createGallery(filteredImages);
+
+    // Swipe functionality
+    let startX = 0;
+    let endX = 0;
+
+    lightbox.addEventListener('touchstart', (event) => {
+        startX = event.touches[0].clientX;
+    });
+
+    lightbox.addEventListener('touchmove', (event) => {
+        endX = event.touches[0].clientX;
+    });
+
+    lightbox.addEventListener('touchend', () => {
+        const swipeDistance = endX - startX;
+        if (Math.abs(swipeDistance) > 50) { // Adjust the threshold as needed
+            if (swipeDistance > 0) {
+                // Swipe right
+                currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
+            } else {
+                // Swipe left
+                currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
+            }
+            lightboxImg.src = filteredImages[currentImageIndex].src;
+        }
+    });
 });
