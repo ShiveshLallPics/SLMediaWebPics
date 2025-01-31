@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: transparent;
+  color: #fff;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 90px);
+  z-index: 100;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+header h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+header h1 img {
+  max-width: 140px;
+  height: auto;
+  transform: translateX(-10px); /* Adjust the value to slightly push the image to the left */
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Pop-up Menu Styles */
+.popup {
+  display: none; /* Start hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f5; /* Light gray background */
+  background-image: linear-gradient(to bottom right, #f0f0f5, #e0e0e5); /* Subtle gradient */
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05); /* Refined box shadow */
+  border-radius: 10px;
+  z-index: 200;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Smooth background transition */
+}
+
+.popup.show {
+  display: block; /* Make visible */
+  opacity: 1;
+}
+
+.popup a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  transition: color 0.2s ease; /* Hover effect transition */
+}
+
+.popup a:hover {
+  color: #007bff; /* Blue hover color */
+}
+
+/* Close Button Styles */
+.close-btn {
+  background-color: #6f6f6f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #767676;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 90px; /* Add top margin to push it down */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Embed Google Form Styles */
+.contact-section iframe {
+  width: 100%;
+  height: 800px; /* Adjust the height as needed */
+  border: none;
+}
+
+/* Contact Options Styles */
+.contact-options {
+  margin-top: 2rem;
+}
+
+.contact-options h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-options li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.contact-options a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.contact-options a img {
+  margin-right: 8px;
+}
+
+.contact-options a:hover {
+  color: #007bff; /* Hover color */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f0f0f5;
+  color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  border-top: 2px solid #d1d1e0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+footer a img {
+  margin-right: 8px;
+}
+
+footer a:hover {
+  color: #1da1f2; /* Instagram & Facebook logo hover color */
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
