@@ -151,6 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'https://lh3.googleusercontent.com/d/15j3Bv1X3m2ijNaI50KOfpqjPXrPj5517', type: 'food', alt: 'Close-up of food' },
         { src: 'https://lh3.googleusercontent.com/d/1P_EQ4cmayeIO67Ror1-XK9NmzydcTwnz', type: 'food', alt: 'Close-up of food' },
         { src: 'https://lh3.googleusercontent.com/d/1-_CleIWgBqwGtmEDYxHYchDmEVXyRGU0', type: 'food', alt: 'Close-up of food' },
+        { src: 'https://lh3.googleusercontent.com/d/1BPmtmhsqjHvF3PWF-d7MI6xwD5tF2ZMQ', type: 'food', alt: 'Close-up of food' },
+        { src: 'https://lh3.googleusercontent.com/d/1I3lVAySUcx17cwAgTuhiDDk83-fLtvTi', type: 'food', alt: 'Close-up of food' },
+        { src: 'https://lh3.googleusercontent.com/d/1Kv3mDDcGxrxPwF_8wPt4nyDOKc8MhR8j', type: 'food', alt: 'Close-up of food' },
+        { src: 'https://lh3.googleusercontent.com/d/1J0s7b8rwqIzzzzA06ifWlljZ1c63-DTh', type: 'food', alt: 'Close-up of food' },
+        { src: 'https://lh3.googleusercontent.com/d/1y4y57Zq8eKDsTzK8jocD81FloicfY2ZG', type: 'food', alt: 'Close-up of food' },
+        { src: 'https://lh3.googleusercontent.com/d/1F2SFN9W-g7zM5OmEKTV263vjSkvxjuu-', type: 'food', alt: 'Close-up of food' },
         { src: 'https://lh3.googleusercontent.com/d/1tDkTMXf_9uOGEfimOSwU-40MtCpAissK', type: 'events', alt: 'Athlete in motion' },
         { src: 'https://lh3.googleusercontent.com/d/1hANTXqaA8VKeVQRhm-581Bknwwwp-EMQ', type: 'events', alt: 'Sports action' },
         // ... more images with descriptive alt text
